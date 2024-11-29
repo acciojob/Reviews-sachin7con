@@ -1,9 +1,8 @@
 //SGN
 import React, { useState } from "react";
 import "./App.css";
-import Review from "./Review";
 
-const App = () => {
+const Review = () => {
   const preDefData = [
     {
       id: 1,
@@ -67,13 +66,20 @@ const App = () => {
   const { id, name, job, image, text} = preDefData[currentIndex];
 
   return (
-    <main>
-    <section className="container">
-      <h1 id="review-heading">Our Reviews</h1>
-      <Review />
-    </section>
-    </main>
+    <div>
+      <div className="review">
+        <img className="person-img" src={image} alt={name} />
+        <h2 id={`author-${id}`} className="author">{name}</h2>
+        <h4 className="job">{job}</h4>
+        <p className="info">{text}</p>
+      </div>
+      <div className="buttons">
+        <button className="prev-btn" onClick={handlePrev}>Prev</button>
+        <button className="next-btn" onClick = {handleNext} >Next</button>
+        <button className="random-btn" onClick={handleRandom}>surprise me</button>
+      </div>
+    </div>
   );
 };
 
-export default App;
+export default Review;
