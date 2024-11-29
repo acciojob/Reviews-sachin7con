@@ -63,21 +63,21 @@ const App = () => {
   }
 
     // Destructring object and creating variables with propery name 
-  const { name, job, image, text} = preDefData[currentIndex];
+  const { id, name, job, image, text} = preDefData[currentIndex];
 
   return (
     <div className="container">
       <h1 id="review-heading">Our Reviews</h1>
       <div className="review">
         <img className="person-img" src={image} alt={name} />
-        <h2 className="author">{name}</h2>
+        <h2 id={`author-${id}`} className="author">{name}</h2>
         <h4 className="job">{job}</h4>
         <p className="info">{text}</p>
       </div>
       <div className="buttons">
-        <button onClick={handlePrev}>Prev</button>
-        <button onClick = {handleNext} >Next</button>
-        <button onClick={handleRandom}>Random Review</button>
+        <button className="prev-btn" onClick={handlePrev}>Prev</button>
+        <button className="next-btn" onClick = {handleNext} >Next</button>
+        <button className="random-btn" onClick={handleRandom}>surprise me</button>
       </div>
     </div>
   );
