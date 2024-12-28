@@ -1,4 +1,4 @@
-//SGN
+//SGN, ONS, JSLN, JSP, JMD, JSM, JSSR, JBB, JSRK, JSM, JSVM, JSRK, 
 import React, { useState } from "react";
 import "./App.css";
 
@@ -74,7 +74,7 @@ const Review = () => {
         <p className="info">{text}</p>
       </div>
       <div className="buttons">
-        <button className="prev-btn" onClick={handlePrev}>Prev</button>
+        <button className=".prev-btn" onClick={handlePrev}>Prev</button>
         <button className="next-btn" onClick = {handleNext} >Next</button>
         <button className="random-btn" onClick={handleRandom}>surprise me</button>
       </div>

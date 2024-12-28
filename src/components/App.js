@@ -40,32 +40,7 @@ const App = () => {
   ];
   
   
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const handlePrev = () => {
-      if(currentIndex == 0 ){
-        setCurrentIndex(preDefData.length - 1);
-      }else {
-        setCurrentIndex((prevIndex) => (prevIndex-1));
-      }        
-  }
-
-  const handleNext = () => {
-    if(currentIndex === preDefData.length - 1){
-      setCurrentIndex(0);
-    }else{
-      setCurrentIndex((curr) => curr + 1);
-    }
-  }
-
-  const handleRandom = () => {
-      const randIndx = Math.floor(Math.random() * preDefData.length);
-      setCurrentIndex(randIndx);
-
-  }
-
-    // Destructring object and creating variables with propery name 
-  const { id, name, job, image, text} = preDefData[currentIndex];
-
+  
   return (
     <main>
     <section className="container">
